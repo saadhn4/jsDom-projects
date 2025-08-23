@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Counter</title>
+  </head>
+  <body
+    class="min-h-[90vh] flex flex-col justify-center items-center bg-[#222] text-white"
+  >
+    <h1 class="text-3xl mb-2">Counter App</h1>
+    <p class="font-bold">Count: <span class="count-value">0</span></p>
+    <div class="mt-3">
+      <button
+        class="increase-btn bg-green-500 hover:bg-green-400 px-2 py-1 rounded-sm text-white mr-2 cursor-pointer"
+      >
+        Increase
+      </button>
+      <button
+        class="decrease-btn bg-red-500 hover:bg-red-400 px-2 py-1 rounded-sm text-white mr-2 cursor-pointer"
+      >
+        Decrease
+      </button>
+      <button
+        class="reset-btn bg-yellow-500 hover:bg-yellow-400 px-2 py-1 rounded-sm text-white cursor-pointer"
+      >
+        Reset
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
