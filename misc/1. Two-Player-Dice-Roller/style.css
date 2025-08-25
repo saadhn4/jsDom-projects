@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f857a6, #ff5858);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.player {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  transition: background 0.3s;
+}
+
+.player-active {
+  background: #fff;
+  border: 3px solid #222;
+}
+
+.score {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #c7365f;
+}
+
+.controls {
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: #eee;
+}
+
+.dice-result {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.player-winner {
+  background: #2f2f2f;   /* dark background */
+  color: #fff;           /* white text */
+  border: 3px solid gold;
+}
+
+.player-winner h2 {
+  color: gold;           /* make their name stand out */
+}
