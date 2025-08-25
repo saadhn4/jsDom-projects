@@ -24,6 +24,7 @@ checkBtnEl.addEventListener("click", () => {
   if (!inputValue) {
     msgEl.textContent = "Enter a valid number pls!";
     msgEl.style.color = "red";
+    return;
   }
 
   if (inputValue === secretNumber) {
@@ -55,4 +56,5 @@ resetBtn.addEventListener("click", () => {
   boxEl.textContent = "?";
   document.querySelector("body").style.backgroundColor = "#333";
   secretNumber = Math.trunc(Math.random() * 20) + 1;
+  msgEl.style.color = "white";
 });
