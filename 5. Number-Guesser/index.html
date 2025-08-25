@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Number Guesser</title>
+  </head>
+  <body>
+    <h1>Number Guesser</h1>
+    <h3>Between 1-20</h3>
+    <input
+      type="number"
+      class="js-guess-input"
+      placeholder="Enter your guess"
+    />
+    <button class="js-check-btn">Check</button>
+    <div class="secret-box">?</div>
+
+    <p class="js-message">Start guessing...</p>
+    <p>Score: <span class="score-value">20</span></p>
+    <p>Highscore: <span class="high-score-value">0</span></p>
+    <div class="reset-btn-div">
+      <button class="js-reset-btn">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
