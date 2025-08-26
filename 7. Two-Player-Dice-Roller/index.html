@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Two Player Dice Roller</title>
+  </head>
+  <body
+    class="bg-gradient-to-r from-violet-600 to-indigo-600 min-h-[90vh] flex flex-col justify-center items-center"
+  >
+    <div class="flex gap-x-2">
+      <div class="js-msg text-lg text-center text-white font-bold mb-4">
+        Start Rolling!
+      </div>
+      <img
+        src="img/dice-1.png"
+        alt="dice-pic"
+        class="js-dice-img w-[30px] h-[30px] hidden"
+      />
+    </div>
+    <!-- Card wrapper -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-3">
+      <!-- Card -->
+      <!-- bg-gray-400, border-3 and border-black is one of the active classes here -->
+      <!-- bg-black text-yellow-400 font-bold will be player-winner classes -->
+      <div
+        class="player-0-card bg-white border-3 border-black md:h-[300px] md:w-[200px] h-[200px] w-[100px] text-black flex flex-col gap-y-2 justify-center items-center text-lg rounded-lg"
+      >
+        <p class="player-0">Player 1</p>
+        <p class="player-0-score">0</p>
+      </div>
+      <div
+        class="player-1-card bg-white md:h-[300px] md:w-[200px] h-[200px] w-[100px] text-black flex flex-col gap-y-2 justify-center items-center text-lg rounded-lg"
+      >
+        <p class="player-1">Player 2</p>
+        <p class="player-1-score">0</p>
+      </div>
+    </div>
+    <div class="mt-5">
+      <button
+        class="js-roll-dice bg-yellow-500 text-white rounded-lg px-2 py-1 mr-2 text-lg cursor-pointer"
+      >
+        🎲 Roll dice
+      </button>
+      <button
+        class="js-new-game bg-red-500 text-white rounded-lg px-2 py-1 text-lg cursor-pointer"
+      >
+        🔁 New game
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
