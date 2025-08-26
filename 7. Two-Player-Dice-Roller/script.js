@@ -24,6 +24,12 @@ function init() {
   document.querySelector(".player-1-card").classList.remove("text-yellow-400");
   document.querySelector(".player-1-card").classList.remove("font-bold");
   document.querySelector(".player-1-card").classList.add("bg-white");
+
+  document.querySelector(`.player-1-card`).classList.remove("border-3");
+  document.querySelector(`.player-1-card`).classList.remove("border-black");
+
+  document.querySelector(`.player-0-card`).classList.add("border-3");
+  document.querySelector(`.player-0-card`).classList.add("border-black");
 }
 init();
 
