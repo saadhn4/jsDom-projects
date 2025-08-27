@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Pig Lite</title>
+  </head>
+  <body
+    class="bg-[#222] min-h-[90vh] text-white flex flex-col justify-center items-center"
+  >
+    <h1 class="mb-4 text-2xl">Pig Game V1</h1>
+    <!-- Div for card wrapper -->
+    <div class="flex flex-col md:flex-row gap-3">
+      <!-- Player 0's card -->
+      <div
+        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center"
+      >
+        <p>Player 1</p>
+        <p>0</p>
+      </div>
+      <!-- Player 1's card -->
+      <div
+        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center"
+      >
+        <p>Player 2</p>
+        <p>0</p>
+      </div>
+    </div>
+    <div class="mt-5">
+      <button class="bg-green-500 mr-3 px-2 py-1 rounded-lg md:text-lg">
+        🎲 Roll Dice
+      </button>
+      <button class="bg-blue-500 px-2 py-1 rounded-lg md:text-lg">
+        🔁 New Game
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
