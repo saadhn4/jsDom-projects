@@ -1,5 +1,4 @@
 // DOM Elements
-
 const rollDiceEl = document.querySelector(".js-roll-dice");
 const newGameEl = document.querySelector(".js-new-game");
 const msgEl = document.querySelector(".js-msg");
@@ -7,6 +6,7 @@ const diceImgEl = document.querySelector(".js-dice-img");
 
 let scores, activePlayer, isPlaying;
 
+// Function with initial values
 function init() {
   scores = [0, 0];
   activePlayer = 0;
@@ -45,6 +45,7 @@ rollDiceEl.addEventListener("click", () => {
     scores[activePlayer] += diceValue;
     document.querySelector(`.player-${activePlayer}-score`).textContent =
       scores[activePlayer];
+
     // Updating message element
     msgEl.textContent = `Player ${activePlayer + 1} rolled`;
     diceImgEl.classList.remove("hidden");
@@ -52,11 +53,13 @@ rollDiceEl.addEventListener("click", () => {
 
     // Check for winning condition; if not - switch player
     if (scores[activePlayer] >= 20) {
+      // Updating msgEL in the DOM first
       msgEl.textContent = `Player ${activePlayer + 1} wins! 🏆`;
       diceImgEl.classList.add("hidden");
 
-      // set playing to false so logic no longer works
+      // Set playing to false so logic no longer works
       isPlaying = false;
+
       // Remove active-player classes
       document
         .querySelector(`.player-${activePlayer}-card`)
@@ -67,6 +70,7 @@ rollDiceEl.addEventListener("click", () => {
       document
         .querySelector(`.player-${activePlayer}-card`)
         .classList.remove("bg-white");
+
       // Add winning player classes
       document
         .querySelector(`.player-${activePlayer}-card`)
@@ -79,7 +83,6 @@ rollDiceEl.addEventListener("click", () => {
         .classList.add("font-bold");
     } else {
       // Remove active-player classes
-
       document
         .querySelector(`.player-${activePlayer}-card`)
         .classList.remove("border-3");
@@ -90,6 +93,7 @@ rollDiceEl.addEventListener("click", () => {
       // Switching player logic
       activePlayer = activePlayer === 0 ? 1 : 0;
 
+      // Adding active-player classes to the now switched active player
       document
         .querySelector(`.player-${activePlayer}-card`)
         .classList.add("border-3");
