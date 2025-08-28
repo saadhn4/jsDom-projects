@@ -16,29 +16,34 @@
   <body
     class="bg-[#222] min-h-[90vh] text-white flex flex-col justify-center items-center"
   >
-    <h1 class="mb-4 text-2xl">Pig Game V1</h1>
+    <h1 class="mb-4 text-2xl js-msg">Start rolling..</h1>
     <!-- Div for card wrapper -->
     <div class="flex flex-col md:flex-row gap-3">
+      <!-- border-5 and border-red-500 are active player classes -->
       <!-- Player 0's card -->
       <div
-        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center"
+        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center border-5 border-red-500 player-0-card"
       >
         <p>Player 1</p>
-        <p>0</p>
+        <p class="player-0-score">0</p>
       </div>
       <!-- Player 1's card -->
       <div
-        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center"
+        class="md:h-[300px] md:w-[200px] h-[150px] w-[100px] bg-white text-black rounded-lg flex flex-col justify-center items-center player-1-card"
       >
         <p>Player 2</p>
-        <p>0</p>
+        <p class="player-1-score">0</p>
       </div>
     </div>
     <div class="mt-5">
-      <button class="bg-green-500 mr-3 px-2 py-1 rounded-lg md:text-lg">
+      <button
+        class="bg-green-500 mr-3 px-2 py-1 rounded-lg md:text-lg js-roll-dice-btn cursor-pointer"
+      >
         🎲 Roll Dice
       </button>
-      <button class="bg-blue-500 px-2 py-1 rounded-lg md:text-lg">
+      <button
+        class="bg-blue-500 px-2 py-1 rounded-lg md:text-lg js-new-game-btn cursor-pointer"
+      >
         🔁 New Game
       </button>
     </div>
