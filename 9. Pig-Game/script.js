@@ -56,7 +56,7 @@ rollBtnEl.addEventListener("click", () => {
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
     } else {
-      scores[activePlayer] = 0;
+      // scores[activePlayer] = 0;
       switchPlayer();
     }
   }
