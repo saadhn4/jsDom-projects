@@ -1,0 +1,209 @@
+/* Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* 1rem = 10px */
+body {
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Layout */
+main {
+  position: relative;
+  width: min(100rem, 95vw);
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Player panel */
+.player {
+  padding: clamp(3rem, 6vw, 9rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.4s ease, opacity 0.3s ease;
+}
+
+.name {
+  position: relative;
+  font-size: clamp(2.6rem, 3.2vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: clamp(5rem, 6vw, 8rem);
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.current {
+  background-color: #c7365f;
+  opacity: 0.85;
+  border-radius: 12px;
+  color: #fff;
+  width: min(65%, 28rem);
+  padding: 2rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #f0f0f0;
+}
+
+.current-score {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* Active / Winner states */
+.player--active {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.player--winner {
+  background-color: #2f2f2f !important;
+}
+
+.player--winner .name {
+  color: #c7365f;
+  font-weight: 700;
+}
+
+.player--winner .score {
+  color: #ffd166;
+  font-weight: 700;
+}
+
+/* Dice + Buttons */
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 0.9rem 2.6rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.15);
+  user-select: none;
+}
+
+.btn::first-letter {
+  font-size: 2.2rem;
+  display: inline-block;
+  margin-right: 0.6rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+
+.btn--roll {
+  top: 39.2rem;
+}
+
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:hover {
+  transform: translate(-50%, -1px);
+  box-shadow: 0 1.8rem 3.5rem rgba(0, 0, 0, 0.18);
+}
+
+.btn:active {
+  transform: translate(-50%, 1px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(199, 54, 95, 0.3);
+}
+
+/* Utils */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  main {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .btn--roll {
+    top: auto;
+    bottom: 9.6rem;
+  }
+
+  .btn--hold {
+    top: auto;
+    bottom: 3.6rem;
+  }
+
+  .dice {
+    top: 12rem;
+  }
+}
